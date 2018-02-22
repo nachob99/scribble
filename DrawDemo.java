@@ -100,7 +100,9 @@ public class DrawDemo
         }
 
     }
-
+    /**
+     * Metodo que nos permite dibujar un pentagono de color verde
+     */
     public void drawPentagon(){
         Pen pen = new Pen(200,100, myCanvas);
         pen.setColor(Color.GREEN);
@@ -125,5 +127,18 @@ public class DrawDemo
 
     
         }
+    }
+    /**
+     * Metodo que nos permite dibujar una espiral de color negro
+     */
+    public void drawSpiral(){
+    Pen pen = new Pen(250,200, myCanvas);
+    pen.setColor(Color.BLACK);
+    for(int i = 2;i <50; i++){
+        pen.move(i * 5);
+        pen.turn(90);
+    }
+    
+    
     }
 }
