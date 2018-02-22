@@ -73,11 +73,11 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
@@ -85,30 +85,45 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+
     /**
      * Metodo que dibuja un triangulo verde en las coordenadas pasadas como parametro
      */
     public void drawTriangle (int x,int y){
         Pen pen = new Pen(x, y, myCanvas);
         pen.setColor(Color.GREEN);
-    
+
         for(int i =0; i<3 ;i++){
-                pen.move(200);
-                pen.turn(120);
-        
+            pen.move(200);
+            pen.turn(120);
+
         }
-    
+
     }
-    
+
     public void drawPentagon(){
-    Pen pen = new Pen(200,100, myCanvas);
-    pen.setColor(Color.GREEN);
-    
-    for(int i = 0; i<5; i++){
-        pen.move(100);
-        pen.turn(360/5);
-    
+        Pen pen = new Pen(200,100, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for(int i = 0; i<5; i++){
+            pen.move(100);
+            pen.turn(360/5);
+
+        }
+
     }
+    /**
+     * Metodo que nos permite dibujar poligono con los lados que querramos
+     */
+    public void drarPolygon(int n){
+        Pen pen = new Pen(200,100, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for(int i = 0; i<n; i++){
+            pen.move(50);
+            pen.turn(360/n);
+
     
+        }
     }
 }
